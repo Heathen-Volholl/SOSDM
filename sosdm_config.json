@@ -7,7 +7,6 @@
   "EnableSelfHealing": true,
   "EnableREFALProcessing": false,
   "REFALExecutablePath": "refal5lambda.exe",
-  "MaxConcurrentProcessing": 4
+  "MaxConcurrentProcessing": 4,
   "EnableQualityGate": false
-
 }

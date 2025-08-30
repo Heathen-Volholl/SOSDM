@@ -10,7 +10,7 @@ namespace SOSDM
     // Core SOSDM System
     public class SOSDMCore
     {
-        private SOSDMConfig _config;                 // NEW: store config
+        private SOSDMConfig _config;                 // store config
         private DatabaseManager _database;
         private LLMManager _llm;
         private EmbeddingManager _embeddings;
@@ -49,7 +49,7 @@ namespace SOSDM
             _selfHealing.Start();
 
             Console.WriteLine("Initializing vintage tools...");
-            _config = SOSDMConfig.LoadFromFile();               // NEW: keep the config
+            _config = SOSDMConfig.LoadFromFile();               // keep the config
             _vintageTools = new VintageToolsManager(_config);
             _refal = new REFALProcessor(_config.REFALExecutablePath);
             _rules = new RulesEngine();
@@ -123,7 +123,8 @@ namespace SOSDM
 
                         if (!_rules.EvaluateRule("DocumentQuality", facts))
                         {
-                            Console.WriteLine($"Skipping {fi.Name} - failed quality check");
+                            // FIX: use fi.Name (fileInfo doesn't exist)
+                            Console.WriteLine($"Skipping {fi.Name} - failed quality check ({_rules.LastReason})");
                             continue;
                         }
                     }
@@ -141,11 +142,19 @@ namespace SOSDM
                         document.Abstract = await _vintageTools.ProcessTextWithREFAL(document.Abstract ?? "", "AbstractExtraction");
                     }
 
-                    var embedding = await _embeddings.GenerateEmbedding(document.Content ?? "");
-                    document.Embedding = embedding;
+var embedding = await _embeddings.GenerateEmbedding(document.Content ?? "");
+if (embedding != null && embedding.Length > 0)
+{
+    document.Embedding = embedding;
+}
+else
+{
+    Console.WriteLine($"Warning: embedding unavailable for {fi.Name}; storing document without embedding.");
+}
 
-                    await _database.StoreDocument(document);
-                    Console.WriteLine($"Processed: {fi.Name}");
+await _database.StoreDocument(document);
+Console.WriteLine($"Processed: {fi.Name}");
+
                 }
 
                 Console.WriteLine("Ingestion complete");
