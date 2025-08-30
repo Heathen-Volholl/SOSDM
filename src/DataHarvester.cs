@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace SOSDM
 {
     // DataHarvester
-    public class DataHarvester
+    public class DataHarvester : IDisposable
     {
         private readonly HttpClient _httpClient;
         
@@ -28,8 +28,7 @@ namespace SOSDM
                 var url = $"http://export.arxiv.org/api/query?search_query=all:{query}&start=0&max_results={maxResults}";
                 var response = await _httpClient.GetStringAsync(url);
                 
-                // Parse arXiv XML response
-                // This is a simplified implementation - would need proper XML parsing
+                // Parse arXiv XML response (very simplified)
                 var lines = response.Split('\n');
                 
                 Document currentDoc = null;
@@ -114,8 +113,8 @@ namespace SOSDM
             var startTag = $"<{tagName}>";
             var endTag = $"</{tagName}>";
             
-            var startIndex = xmlLine.IndexOf(startTag);
-            var endIndex = xmlLine.IndexOf(endTag);
+            var startIndex = xmlLine.IndexOf(startTag, StringComparison.Ordinal);
+            var endIndex = xmlLine.IndexOf(endTag, StringComparison.Ordinal);
             
             if (startIndex >= 0 && endIndex > startIndex)
             {
@@ -131,4 +130,4 @@ namespace SOSDM
             _httpClient?.Dispose();
         }
     }
-
+}

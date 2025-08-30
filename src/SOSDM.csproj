@@ -20,12 +20,13 @@
     <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.0" />
     <PackageReference Include="LiteDB" Version="5.0.15" />
     <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.16.3" />
-    
+
     <!-- Data Processing -->
     <PackageReference Include="CsvHelper" Version="30.0.1" />
     <PackageReference Include="HtmlAgilityPack" Version="1.11.54" />
+    <!-- If you hit restore errors with PdfPig, swap to UglyToad.PdfPig -->
     <PackageReference Include="PdfPig" Version="0.1.8" />
-    <PackageReference Include="System.Text.Json" Version="7.0.0" />
+    <PackageReference Include="System.Text.Json" Version="7.0.14" />
     
     <!-- ML/Analytics -->
     <PackageReference Include="Accord.MachineLearning" Version="3.8.0" />
@@ -40,6 +41,13 @@
     <!-- Configuration -->
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+  </ItemGroup>
+
+  <!-- Exclude common backup file patterns to avoid CS0101 from duplicates -->
+  <ItemGroup>
+    <Compile Remove="Vintage\*.bak.cs" />
+    <Compile Remove="Vintage\* - Copy.cs" />
+    <Compile Remove="Vintage\*_old.cs" />
   </ItemGroup>
 
   <ItemGroup>

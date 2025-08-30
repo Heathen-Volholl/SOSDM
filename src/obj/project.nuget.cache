@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wbGmXduv2rg=",
+  "dgSpecHash": "PsvhBg+0YX8=",
   "success": true,
   "projectFilePath": "C:\\SOSDM\\src\\SOSDM.csproj",
   "expectedPackageFiles": [
@@ -43,17 +43,41 @@
     "C:\\NuGetCache\\sqlitepclraw.provider.e_sqlite3\\2.1.2\\sqlitepclraw.provider.e_sqlite3.2.1.2.nupkg.sha512",
     "C:\\NuGetCache\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
     "C:\\NuGetCache\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "C:\\NuGetCache\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\NuGetCache\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
+    "C:\\NuGetCache\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
+    "C:\\NuGetCache\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
     "C:\\NuGetCache\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
     "C:\\NuGetCache\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
     "C:\\NuGetCache\\microsoft.netcore.app.host.win-x64\\6.0.36\\microsoft.netcore.app.host.win-x64.6.0.36.nupkg.sha512"
   ],
   "logs": [
     {
+      "code": "NU1603",
+      "level": "Warning",
+      "message": "SOSDM depends on System.Text.Json (>= 7.0.14) but System.Text.Json 7.0.14 was not found. System.Text.Json 8.0.0 was resolved instead.",
+      "projectPath": "C:\\SOSDM\\src\\SOSDM.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\SOSDM\\src\\SOSDM.csproj",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
       "code": "NU1903",
       "level": "Warning",
-      "message": "Package 'System.Text.Json' 7.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-hh2w-p6rv-4g7w",
+      "message": "Package 'System.Text.Json' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
+      "projectPath": "C:\\SOSDM\\src\\SOSDM.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\SOSDM\\src\\SOSDM.csproj",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'System.Text.Json' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-hh2w-p6rv-4g7w",
       "projectPath": "C:\\SOSDM\\src\\SOSDM.csproj",
       "warningLevel": 1,
       "filePath": "C:\\SOSDM\\src\\SOSDM.csproj",

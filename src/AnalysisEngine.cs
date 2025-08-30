@@ -77,3 +77,4 @@ namespace SOSDM
             return findings;
         }
     }
+}

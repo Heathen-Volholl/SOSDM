@@ -83,13 +83,13 @@ namespace SOSDM
             {
                 documents.Add(new Document
                 {
-                    Id = reader.GetString("Id"),
-                    Title = reader.GetString("Title"),
-                    Authors = reader.IsDBNull("Authors") ? null : reader.GetString("Authors"),
-                    Abstract = reader.IsDBNull("Abstract") ? null : reader.GetString("Abstract"),
-                    Content = reader.GetString("Content"),
-                    Source = reader.IsDBNull("Source") ? null : reader.GetString("Source"),
-                    PublicationDate = reader.IsDBNull("PublicationDate") ? null : reader.GetString("PublicationDate")
+                    Id = reader.GetString(reader.GetOrdinal("Id")),
+                    Title = reader.GetString(reader.GetOrdinal("Title")),
+                    Authors = reader.IsDBNull(reader.GetOrdinal("Authors")) ? null : reader.GetString(reader.GetOrdinal("Authors")),
+                    Abstract = reader.IsDBNull(reader.GetOrdinal("Abstract")) ? null : reader.GetString(reader.GetOrdinal("Abstract")),
+                    Content = reader.GetString(reader.GetOrdinal("Content")),
+                    Source = reader.IsDBNull(reader.GetOrdinal("Source")) ? null : reader.GetString(reader.GetOrdinal("Source")),
+                    PublicationDate = reader.IsDBNull(reader.GetOrdinal("PublicationDate")) ? null : reader.GetString(reader.GetOrdinal("PublicationDate"))
                 });
             }
             
@@ -160,4 +160,4 @@ namespace SOSDM
             };
         }
     }
-
+}

@@ -57,4 +57,4 @@ namespace SOSDM
             return string.Join("", responses).Trim();
         }
     }
-
+}

@@ -5,7 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using SOSDM.Vintage;  // Add this line - Step 3!
 
-namespace SOSDM{
+namespace SOSDM
+{
     // Core SOSDM System
     public class SOSDMCore
     {
@@ -48,7 +49,7 @@ namespace SOSDM{
             
             // Add vintage tools initialization - Step 3!
             Console.WriteLine("Initializing vintage tools...");
-            var config = SOSDMConfig.LoadFromFile(); // You'll need to create this method
+            var config = SOSDMConfig.LoadFromFile();
             _vintageTools = new VintageToolsManager(config);
             _refal = new REFALProcessor(config.REFALExecutablePath);
             _rules = new RulesEngine();
@@ -173,4 +174,3 @@ namespace SOSDM{
         }
     }
 }
-

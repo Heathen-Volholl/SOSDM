@@ -11,9 +11,9 @@ using Microsoft.ML.OnnxRuntime;
 using System.Numerics;
 using System.Linq;
 
-namespace SOSDM  // Add missing opening brace here
+namespace SOSDM
 {
-// Main Application Entry Point
+    // Main Application Entry Point
     public class Program
     {
         private static SOSDMCore _core;
@@ -88,3 +88,4 @@ namespace SOSDM  // Add missing opening brace here
             Console.WriteLine("  quit/exit       - Exit application\n");
         }
     }
+}

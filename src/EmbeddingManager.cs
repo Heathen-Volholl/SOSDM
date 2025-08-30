@@ -22,8 +22,10 @@ namespace SOSDM
                 throw new FileNotFoundException($"Embedding model not found: {modelPath}");
             }
             
-            var options = new SessionOptions();
-            options.ExecutionMode = ExecutionMode.ORT_SEQUENTIAL;
+            var options = new SessionOptions
+            {
+                ExecutionMode = ExecutionMode.ORT_SEQUENTIAL
+            };
             
             _session = new InferenceSession(modelPath, options);
         }
@@ -31,7 +33,7 @@ namespace SOSDM
         public async Task<float[]> GenerateEmbedding(string text)
         {
             // Simplified tokenization - in production, use proper tokenizer
-            var tokens = text.Split(' ').Take(128).ToArray();
+            var tokens = text.Split(' ', StringSplitOptions.RemoveEmptyEntries).Take(128).ToArray();
             var tokenIds = tokens.Select(t => t.GetHashCode() % 30000).ToArray();
             
             // Pad to fixed length
@@ -53,4 +55,4 @@ namespace SOSDM
             return embeddings.Take(384).ToArray(); // MiniLM produces 384-dim embeddings
         }
     }
-
+}
