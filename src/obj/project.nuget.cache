@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S7My4fuZITM=",
+  "dgSpecHash": "PsvhBg+0YX8=",
   "success": true,
-  "projectFilePath": "C:\\GitHub\\SOSDM\\src\\SOSDM.csproj",
+  "projectFilePath": "C:\\SOSDM\\src\\SOSDM.csproj",
   "expectedPackageFiles": [
     "C:\\NuGetCache\\accord\\3.8.0\\accord.3.8.0.nupkg.sha512",
     "C:\\NuGetCache\\accord.machinelearning\\3.8.0\\accord.machinelearning.3.8.0.nupkg.sha512",
@@ -54,9 +54,9 @@
       "code": "NU1603",
       "level": "Warning",
       "message": "SOSDM depends on System.Text.Json (>= 7.0.14) but System.Text.Json 7.0.14 was not found. System.Text.Json 8.0.0 was resolved instead.",
-      "projectPath": "C:\\GitHub\\SOSDM\\src\\SOSDM.csproj",
+      "projectPath": "C:\\SOSDM\\src\\SOSDM.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\GitHub\\SOSDM\\src\\SOSDM.csproj",
+      "filePath": "C:\\SOSDM\\src\\SOSDM.csproj",
       "libraryId": "System.Text.Json",
       "targetGraphs": [
         "net6.0"
@@ -66,9 +66,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'System.Text.Json' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
-      "projectPath": "C:\\GitHub\\SOSDM\\src\\SOSDM.csproj",
+      "projectPath": "C:\\SOSDM\\src\\SOSDM.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\GitHub\\SOSDM\\src\\SOSDM.csproj",
+      "filePath": "C:\\SOSDM\\src\\SOSDM.csproj",
       "libraryId": "System.Text.Json",
       "targetGraphs": [
         "net6.0"
@@ -78,9 +78,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'System.Text.Json' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-hh2w-p6rv-4g7w",
-      "projectPath": "C:\\GitHub\\SOSDM\\src\\SOSDM.csproj",
+      "projectPath": "C:\\SOSDM\\src\\SOSDM.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\GitHub\\SOSDM\\src\\SOSDM.csproj",
+      "filePath": "C:\\SOSDM\\src\\SOSDM.csproj",
       "libraryId": "System.Text.Json",
       "targetGraphs": [
         "net6.0"

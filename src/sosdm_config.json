@@ -1,0 +1,12 @@
+{
+  "ModelDirectory": "models",
+  "DatabasePath": "sosdm.db",
+  "ObjectDatabasePath": "sosdm_objects.db",
+  "MaxQueryResults": 20,
+  "EmbeddingDimensions": 384,
+  "EnableSelfHealing": true,
+  "EnableREFALProcessing": false,
+  "REFALExecutablePath": "refal5lambda.exe",
+  "MaxConcurrentProcessing": 4,
+  "EnableQualityGate": true
+}

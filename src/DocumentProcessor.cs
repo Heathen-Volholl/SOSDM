@@ -56,16 +56,19 @@ namespace SOSDM
         private async Task<string> ExtractPdfContent(string filePath)
         {
             // Placeholder - implement with PdfPig or similar
+            await Task.Yield();
             return "PDF content extraction not yet implemented";
         }
         
         private async Task<string> ExtractPdfTitle(string filePath)
         {
+            await Task.Yield();
             return Path.GetFileNameWithoutExtension(filePath);
         }
         
         private async Task<Document> ParseArxivXml(string filePath)
         {
+            await Task.Yield();
             // Placeholder - implement arXiv XML parsing
             return new Document
             {
@@ -78,18 +81,18 @@ namespace SOSDM
         
         private void ExtractMetadata(Document document)
         {
-            var content = document.Content;
+            var content = document.Content ?? string.Empty;
             
             // Simple abstract extraction
             var abstractMarkers = new[] { "abstract", "Abstract", "ABSTRACT" };
             foreach (var marker in abstractMarkers)
             {
-                var index = content.IndexOf(marker);
+                var index = content.IndexOf(marker, StringComparison.Ordinal);
                 if (index >= 0)
                 {
                     var start = index + marker.Length;
-                    var end = content.IndexOf('\n', start + 200);
-                    if (end > start)
+                    var end = content.IndexOf('\n', Math.Min(start + 200, content.Length - 1));
+                    if (end > start && end > -1)
                     {
                         document.Abstract = content.Substring(start, end - start).Trim();
                         break;
@@ -98,4 +101,4 @@ namespace SOSDM
             }
         }
     }
-
+}
