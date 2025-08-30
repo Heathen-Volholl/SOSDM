@@ -16,7 +16,10 @@ namespace SOSDM
         public bool EnableREFALProcessing { get; set; } = false;
         public string REFALExecutablePath { get; set; } = "refal5lambda.exe";
         public int MaxConcurrentProcessing { get; set; } = 4;
-        
+
+        // NEW: toggle the ingestion quality gate
+        public bool EnableQualityGate { get; set; } = true;
+
         public static SOSDMConfig LoadFromFile(string configPath = "sosdm_config.json")
         {
             if (File.Exists(configPath))
@@ -31,12 +34,12 @@ namespace SOSDM
                     Console.WriteLine($"Config loading error: {ex.Message}, using defaults");
                 }
             }
-            
+
             var config = new SOSDMConfig();
             SaveToFile(config, configPath);
             return config;
         }
-        
+
         public static void SaveToFile(SOSDMConfig config, string configPath = "sosdm_config.json")
         {
             try

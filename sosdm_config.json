@@ -1,14 +1,13 @@
 {
   "ModelDirectory": "models",
-  "DatabasePath": "data/sosdm.db",
-  "ObjectDatabasePath": "data/sosdm_objects.db",
+  "DatabasePath": "sosdm.db",
+  "ObjectDatabasePath": "sosdm_objects.db",
   "MaxQueryResults": 20,
   "EmbeddingDimensions": 384,
   "EnableSelfHealing": true,
   "EnableREFALProcessing": false,
-  "REFALExecutablePath": "refal/refal5lambda.exe",
-  "MaxConcurrentProcessing": 4,
-  "LogLevel": "Information",
-  "ApiPort": 8080,
-  "EnableWebInterface": false
+  "REFALExecutablePath": "refal5lambda.exe",
+  "MaxConcurrentProcessing": 4
+  "EnableQualityGate": false
+
 }
