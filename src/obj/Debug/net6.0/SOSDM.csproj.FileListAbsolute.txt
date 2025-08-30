@@ -1,0 +1,5 @@
+C:\SOSDM\src\obj\Debug\net6.0\SOSDM.csproj.AssemblyReference.cache
+C:\SOSDM\src\obj\Debug\net6.0\SOSDM.GeneratedMSBuildEditorConfig.editorconfig
+C:\SOSDM\src\obj\Debug\net6.0\SOSDM.AssemblyInfoInputs.cache
+C:\SOSDM\src\obj\Debug\net6.0\SOSDM.AssemblyInfo.cs
+C:\SOSDM\src\obj\Debug\net6.0\SOSDM.csproj.CoreCompileInputs.cache

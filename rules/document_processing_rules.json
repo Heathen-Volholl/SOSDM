@@ -1,0 +1,109 @@
+// ==============================
+// Production Rules Definition
+// File: rules/document_processing_rules.json
+// ==============================
+
+{
+  "RuleSet": "DocumentProcessing",
+  "Version": "1.0",
+  "Rules": [
+    {
+      "Name": "DocumentQualityCheck",
+      "Priority": 100,
+      "Conditions": [
+        {
+          "Property": "WordCount",
+          "Operator": "GreaterThan",
+          "Value": 100
+        },
+        {
+          "Property": "HasAbstract",
+          "Operator": "Equal",
+          "Value": true
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "SetProperty",
+          "Property": "QualityLevel",
+          "Value": "High"
+        },
+        {
+          "Type": "Log",
+          "Message": "Document passed quality check"
+        }
+      ]
+    },
+    {
+      "Name": "LargeFileProcessing",
+      "Priority": 90,
+      "Conditions": [
+        {
+          "Property": "FileSize",
+          "Operator": "GreaterThan",
+          "Value": 52428800
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "SetProperty",
+          "Property": "ProcessingMethod",
+          "Value": "OCR"
+        },
+        {
+          "Type": "Log",
+          "Message": "Using OCR for large file processing"
+        }
+      ]
+    },
+    {
+      "Name": "ContradictionDetection",
+      "Priority": 80,
+      "Conditions": [
+        {
+          "Property": "SimilarityScore",
+          "Operator": "GreaterThan",
+          "Value": 0.8
+        },
+        {
+          "Property": "ConclusionDifference",
+          "Operator": "GreaterThan",
+          "Value": 0.6
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "SetProperty",
+          "Property": "ContradictionFlag",
+          "Value": true
+        },
+        {
+          "Type": "Log",
+          "Message": "Potential contradiction detected"
+        }
+      ]
+    },
+    {
+      "Name": "LanguageDetection",
+      "Priority": 70,
+      "Conditions": [
+        {
+          "Property": "NonEnglishCharacterRatio",
+          "Operator": "GreaterThan",
+          "Value": 0.1
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "SetProperty",
+          "Property": "RequiresTranslation",
+          "Value": true
+        },
+        {
+          "Type": "Log",
+          "Message": "Non-English content detected"
+        }
+      ]
+    }
+  ]
+}

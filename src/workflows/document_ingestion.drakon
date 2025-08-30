@@ -1,0 +1,110 @@
+// ==============================
+// DRAKON Workflow Definitions
+// File: workflows/document_ingestion.drakon
+// ==============================
+
+/*
+DRAKON Visual Workflow for Document Ingestion
+This would be created using DRAKON Editor and compiled to executable code
+
+Workflow: DocumentIngestion
+├── Start
+├── ValidateInput
+│   ├── [Valid] → ExtractMetadata
+│   └── [Invalid] → LogError → End
+├── ExtractMetadata
+│   ├── [PDF] → ExtractPDFContent
+│   ├── [XML] → ParseXMLContent  
+│   └── [TXT] → ReadTextContent
+├── ProcessContent
+│   ├── NormalizeText (REFAL)
+│   ├── ExtractAbstract (REFAL)
+│   └── ExtractKeywords (REFAL)
+├── GenerateEmbedding
+│   ├── [Success] → StoreDocument
+│   └── [Failure] → RetryWithFallback
+├── StoreDocument
+│   ├── StoreSQLite
+│   ├── StoreLiteDB
+│   └── UpdateIndex
+└── End
+*/
+
+// Compiled C# code from DRAKON workflow:
+
+public class DocumentIngestionWorkflow
+{
+    private readonly WorkflowContext _context;
+    private readonly ILogger _logger;
+    
+    public DocumentIngestionWorkflow(WorkflowContext context, ILogger logger)
+    {
+        _context = context;
+        _logger = logger;
+    }
+    
+    public async Task<WorkflowResult> Execute()
+    {
+        var result = new WorkflowResult { WorkflowName = "DocumentIngestion" };
+        
+        try
+        {
+            // Step 1: Validate Input
+            if (!await ValidateInput())
+            {
+                await LogError("Input validation failed");
+                return result.WithError("Invalid input");
+            }
+            
+            // Step 2: Extract Metadata based on file type
+            var contentResult = await ExtractContent();
+            if (!contentResult.Success)
+            {
+                return result.WithError(contentResult.ErrorMessage);
+            }
+            
+            // Step 3: Process Content using REFAL
+            await ProcessContentWithREFAL();
+            
+            // Step 4: Generate Embedding
+            var embeddingResult = await GenerateEmbedding();
+            if (!embeddingResult.Success)
+            {
+                embeddingResult = await RetryWithFallback();
+            }
+            
+            // Step 5: Store Document
+            await StoreDocument();
+            
+            result.Success = true;
+            return result;
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Workflow execution failed");
+            return result.WithError(ex.Message);
+        }
+    }
+    
+    private async Task<bool> ValidateInput()
+    {
+        var filePath = _context.GetParameter<string>("FilePath");
+        return File.Exists(filePath) && new FileInfo(filePath).Length > 0;
+    }
+    
+    private async Task<ContentExtractionResult> ExtractContent()
+    {
+        var filePath = _context.GetParameter<string>("FilePath");
+        var extension = Path.GetExtension(filePath).ToLower();
+        
+        return extension switch
+        {
+            ".pdf" => await ExtractPDFContent(filePath),
+            ".xml" => await ParseXMLContent(filePath),
+            ".txt" => await ReadTextContent(filePath),
+            _ => new ContentExtractionResult { Success = false, ErrorMessage = "Unsupported file type" }
+        };
+    }
+    
+    // Implementation methods would follow...
+}

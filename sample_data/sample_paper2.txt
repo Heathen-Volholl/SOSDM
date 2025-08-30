@@ -1,0 +1,10 @@
+Title: Artificial Intelligence in Climate Change Research: Current Applications and Future Prospects
+
+Abstract: Climate change represents one of the most pressing challenges of our time. This review 
+examines how artificial intelligence techniques are being applied to climate research, including 
+climate modeling, extreme weather prediction, and environmental monitoring. We analyze recent 
+developments and discuss future research directions.
+
+Introduction: The application of AI to climate science has grown significantly...
+
+Keywords: artificial intelligence, climate change, environmental monitoring, weather prediction, machine learning
