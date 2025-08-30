@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\SOSDM\\src\\SOSDM.csproj": {}
+    "C:\\GitHub\\SOSDM\\src\\SOSDM.csproj": {}
   },
   "projects": {
-    "C:\\SOSDM\\src\\SOSDM.csproj": {
+    "C:\\GitHub\\SOSDM\\src\\SOSDM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\SOSDM\\src\\SOSDM.csproj",
+        "projectUniqueName": "C:\\GitHub\\SOSDM\\src\\SOSDM.csproj",
         "projectName": "SOSDM",
-        "projectPath": "C:\\SOSDM\\src\\SOSDM.csproj",
+        "projectPath": "C:\\GitHub\\SOSDM\\src\\SOSDM.csproj",
         "packagesPath": "C:\\NuGetCache",
-        "outputPath": "C:\\SOSDM\\src\\obj\\",
+        "outputPath": "C:\\GitHub\\SOSDM\\src\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

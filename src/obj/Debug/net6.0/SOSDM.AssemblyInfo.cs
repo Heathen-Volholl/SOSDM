@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Lightweight AI system for scholarly article analysis")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27e2b5661d47db8bce30cc33d4b976df8934ff41")]
 [assembly: System.Reflection.AssemblyProductAttribute("Small Open Source Dataset Model")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SOSDM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
