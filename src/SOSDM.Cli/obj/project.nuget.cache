@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "sg8N/Em4Psc=",
+  "success": true,
+  "projectFilePath": "C:\\GitHub\\SOSDM\\src\\SOSDM.Cli\\SOSDM.Cli.csproj",
+  "expectedPackageFiles": [
+    "C:\\NuGetCache\\litedb\\5.0.21\\litedb.5.0.21.nupkg.sha512",
+    "C:\\NuGetCache\\microsoft.data.sqlite\\9.0.8\\microsoft.data.sqlite.9.0.8.nupkg.sha512",
+    "C:\\NuGetCache\\microsoft.data.sqlite.core\\9.0.8\\microsoft.data.sqlite.core.9.0.8.nupkg.sha512",
+    "C:\\NuGetCache\\sqlitepclraw.bundle_e_sqlite3\\2.1.10\\sqlitepclraw.bundle_e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\NuGetCache\\sqlitepclraw.core\\2.1.10\\sqlitepclraw.core.2.1.10.nupkg.sha512",
+    "C:\\NuGetCache\\sqlitepclraw.lib.e_sqlite3\\2.1.10\\sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\NuGetCache\\sqlitepclraw.provider.e_sqlite3\\2.1.10\\sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\NuGetCache\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\NuGetCache\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}
