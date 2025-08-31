@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "sg8N/Em4Psc=",
+  "dgSpecHash": "Xx3iq6KZWK8=",
   "success": true,
   "projectFilePath": "C:\\GitHub\\SOSDM\\src\\SOSDM.Cli\\SOSDM.Cli.csproj",
   "expectedPackageFiles": [
+    "C:\\NuGetCache\\harfbuzzsharp\\8.3.1.1\\harfbuzzsharp.8.3.1.1.nupkg.sha512",
+    "C:\\NuGetCache\\harfbuzzsharp.nativeassets.macos\\8.3.1.1\\harfbuzzsharp.nativeassets.macos.8.3.1.1.nupkg.sha512",
+    "C:\\NuGetCache\\harfbuzzsharp.nativeassets.win32\\8.3.1.1\\harfbuzzsharp.nativeassets.win32.8.3.1.1.nupkg.sha512",
     "C:\\NuGetCache\\litedb\\5.0.21\\litedb.5.0.21.nupkg.sha512",
     "C:\\NuGetCache\\microsoft.data.sqlite\\9.0.8\\microsoft.data.sqlite.9.0.8.nupkg.sha512",
     "C:\\NuGetCache\\microsoft.data.sqlite.core\\9.0.8\\microsoft.data.sqlite.core.9.0.8.nupkg.sha512",
@@ -12,7 +15,13 @@
     "C:\\NuGetCache\\sqlitepclraw.lib.e_sqlite3\\2.1.10\\sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg.sha512",
     "C:\\NuGetCache\\sqlitepclraw.provider.e_sqlite3\\2.1.10\\sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512",
     "C:\\NuGetCache\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
-    "C:\\NuGetCache\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+    "C:\\NuGetCache\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\NuGetCache\\system.text.encoding.codepages\\9.0.8\\system.text.encoding.codepages.9.0.8.nupkg.sha512",
+    "C:\\NuGetCache\\uglytoad.pdfpig\\1.7.0-custom-5\\uglytoad.pdfpig.1.7.0-custom-5.nupkg.sha512",
+    "C:\\NuGetCache\\uglytoad.pdfpig.core\\1.7.0-custom-5\\uglytoad.pdfpig.core.1.7.0-custom-5.nupkg.sha512",
+    "C:\\NuGetCache\\uglytoad.pdfpig.fonts\\1.7.0-custom-5\\uglytoad.pdfpig.fonts.1.7.0-custom-5.nupkg.sha512",
+    "C:\\NuGetCache\\uglytoad.pdfpig.tokenization\\1.7.0-custom-5\\uglytoad.pdfpig.tokenization.1.7.0-custom-5.nupkg.sha512",
+    "C:\\NuGetCache\\uglytoad.pdfpig.tokens\\1.7.0-custom-5\\uglytoad.pdfpig.tokens.1.7.0-custom-5.nupkg.sha512"
   ],
   "logs": []
 }

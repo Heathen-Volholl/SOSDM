@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SOSDM.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b68606bad1009bead8139f90ba84b1e645c1473b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6facbbf7c405d67f7d8e8da01482effe45b4fe6")]
 [assembly: System.Reflection.AssemblyProductAttribute("SOSDM.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SOSDM.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

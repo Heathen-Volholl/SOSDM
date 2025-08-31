@@ -256,6 +256,7 @@ namespace SOSDM
                 var embeddings = _liteDb.GetCollection<DocumentEmbedding>("embeddings");
                 embeddings.Upsert(new DocumentEmbedding
                 {
+					Id = document.Id, 
                     DocumentId = document.Id,
                     Vector = document.Embedding
                 });

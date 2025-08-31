@@ -58,6 +58,10 @@
             "Microsoft.Data.Sqlite": {
               "target": "Package",
               "version": "[9.0.8, )"
+            },
+            "System.Text.Encoding.CodePages": {
+              "target": "Package",
+              "version": "[9.0.8, )"
             }
           },
           "imports": [

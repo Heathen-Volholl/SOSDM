@@ -1,0 +1,13 @@
+C:\GitHub\SOSDM\src\SOSDM.Core\bin\Debug\net8.0\SOSDM.Core.deps.json
+C:\GitHub\SOSDM\src\SOSDM.Core\bin\Debug\net8.0\SOSDM.Core.dll
+C:\GitHub\SOSDM\src\SOSDM.Core\bin\Debug\net8.0\SOSDM.Core.pdb
+C:\GitHub\SOSDM\src\SOSDM.Core\obj\Debug\net8.0\SOSDM.Core.csproj.AssemblyReference.cache
+C:\GitHub\SOSDM\src\SOSDM.Core\obj\Debug\net8.0\SOSDM.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\SOSDM\src\SOSDM.Core\obj\Debug\net8.0\SOSDM.Core.AssemblyInfoInputs.cache
+C:\GitHub\SOSDM\src\SOSDM.Core\obj\Debug\net8.0\SOSDM.Core.AssemblyInfo.cs
+C:\GitHub\SOSDM\src\SOSDM.Core\obj\Debug\net8.0\SOSDM.Core.csproj.CoreCompileInputs.cache
+C:\GitHub\SOSDM\src\SOSDM.Core\obj\Debug\net8.0\SOSDM.Core.sourcelink.json
+C:\GitHub\SOSDM\src\SOSDM.Core\obj\Debug\net8.0\SOSDM.Core.dll
+C:\GitHub\SOSDM\src\SOSDM.Core\obj\Debug\net8.0\refint\SOSDM.Core.dll
+C:\GitHub\SOSDM\src\SOSDM.Core\obj\Debug\net8.0\SOSDM.Core.pdb
+C:\GitHub\SOSDM\src\SOSDM.Core\obj\Debug\net8.0\ref\SOSDM.Core.dll
